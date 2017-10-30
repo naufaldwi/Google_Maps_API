@@ -1,4 +1,5 @@
 package com.rawon.googlemapsapi;
+
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 
@@ -22,6 +23,7 @@ public class MainActivity extends AppCompatActivity implements OnStreetViewPanor
     @Override
     public void onStreetViewPanoramaReady(StreetViewPanorama panorama) {
         panorama.setPosition(new LatLng(-6.921932, 107.607639));
+        panorama.setStreetNamesEnabled(false);
         StreetViewPanoramaCamera camera = new StreetViewPanoramaCamera.Builder()
                 .bearing(180)
                 .build();
